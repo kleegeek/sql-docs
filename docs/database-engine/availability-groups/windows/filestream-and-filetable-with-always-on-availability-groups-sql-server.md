@@ -35,7 +35,7 @@ monikerRange: ">=sql-server-2016"
   
  `\\<computer_name>\<filestream_share_name>`  
   
- In an Always On availability group, however, the name of the computer is virtualized by using a Virtual Network Name, or VNN. When the computer is the primary replica in an availability group, and databases in the availability group contain FILESTREAM data, then a VNN-scoped share is also created to provide access to the FILESTREAM data. This does not affect Transact-SQL access to FILESTREAM data. However applications that use file system APIs have to use the VNN-scoped share, which has a path in the following format:  
+ In an Always On availability group, however, the name of the computer is virtualized by using a Virtual Network Name, or VNN. The VNN is usually the Availability Group listener name. When the computer is the primary replica in an availability group, and databases in the availability group contain FILESTREAM data, then a VNN-scoped share is also created to provide access to the FILESTREAM data. This does not affect Transact-SQL access to FILESTREAM data. However applications that use file system APIs have to use the VNN-scoped share, which has a path in the following format:  
   
  `\\<VNN>\<filestream_share_name>`  
   
